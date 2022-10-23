@@ -1,0 +1,17 @@
+<div id="notification" class="modal {{ showResult }}">
+    <div class="modal-dialog modal-confirm {{ result }}">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <div class="icon-box">
+                    <i class="material-icons">{{ icon }}</i>
+                </div>
+                <button id="close" type="button" class="close" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body {{ result }}">
+                {% for item in notification %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

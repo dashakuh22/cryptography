@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>2FA</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/img/avatar.png" size="32">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/userForm/styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+<div class="login-form">
+    <form action="/2fa" method="post">
+        <div class="avatar">
+            <img src="/assets/img/avatar.png" alt="Avatar">
+        </div>
+        <h2 class="text-center">2FA</h2>
+        <div class="img d-flex justify-content-center">
+            <img src="{{ qr }}" />
+        </div>
+        <div class="form-group ">
+            <label for="qr" class="d-flex justify-content-center">QR</label>
+            <input id="qr" class="form-control" name="qr" required>
+        </div>
+        <input type="hidden" value="{{ check_value }}" name="check_value">
+        <input type="hidden" value="{{ id }}" name="id">
+        <div class="form-group">
+            <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Verify</button>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

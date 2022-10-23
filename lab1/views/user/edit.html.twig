@@ -1,0 +1,30 @@
+<div id="view{{ user.id }}" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content view">
+            <form action="/user-form" method="post">
+                <div class="modal-body success">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input name="first_name" type="text" class="form-control" pattern="[A-Za-z]+"
+                               value="{{ user.first_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input name="last_name" type="text" class="form-control" pattern="[A-Za-z]+"
+                               value="{{ user.last_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input name="age" type="number" min="18" max="100" class="form-control"
+                               value="{{ user.age }}" required>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" value="{{ check_value }}" name="check_value">
+                        <input type="submit" class="btn btn-info" value="Submit">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fileForm/styles.css">
+    <link rel="icon" href="data:,">
+</head>
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="form-row">
+                    <div class="form-group col-xs-4">
+                        <h2>User <b>Info</b></h2>
+                    </div>
+                    <div class="form-group col-4">
+                        <a href="/logout" class="btn btn-success">
+                            <i class="material-icons">&#xe9ba;</i><span>Log Out</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            {{ include('edit.html.twig') }}
+        </div>
+        <form action="/user-form" method="post">
+            <div class="form-group">
+                <label>First Name</label>
+                <input name="first_name" class="form-control" value="{{ user.first_name }}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input name="last_name" class="form-control" value="{{ user.last_name }}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input name="email" class="form-control" value="{{ user.email }}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input name="age" class="form-control" value="{{ user.age }}" disabled>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <a href="#view{{ user.id }}" class="btn btn-primary edit" data-toggle="modal">Edit</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/assets/js/modalClose.js"></script>
+</body>
+</html>
