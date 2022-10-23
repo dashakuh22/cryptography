@@ -10,7 +10,7 @@ The following tools are required in order to start the installation.
 
 ## Installation
 
-1. Clone this repository locally with `git clone git@github.com:dashakuh22/mvc.git`
+1. Clone this repository locally with `git clone git@github.com:dashakuh22/cryptography.git`
 2. Install the PHP dependencies with `composer install`
 3. Setup configs for the database in `config/configDB`.
 4. Serve the website locally by running `php -S 127.0.0.1:8000`
